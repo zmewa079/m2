@@ -3,3 +3,15 @@
  * 2. The font is a monospaced font
  * (all other design decisions are up to you)
  */
+
+ input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: purple
+  }
+  input:focus {
+    border-color: blue
+  }
+  .monospace {
+    font-family: Lucida Console, Courier, monospace;
+  }
