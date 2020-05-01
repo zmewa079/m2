@@ -30,8 +30,21 @@ function myKeyPress(e){
 
 
   // TODO: Add a condition to ignore entries beyond 10 digits
+  if (y.length>11){
+
+    document.getElementById('phone').value = y.slice(0, 12)//only first 12 including hypens
+
+    event.preventDefault(); //not accepting any more characters
+
+}else{
+
+    document.getElementById('phone').value = y
+
+  }
 
 }
+
+
 
 function formatPhoneNumber(value){
 
