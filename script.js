@@ -50,10 +50,24 @@ function formatPhoneNumber(value){
 
   /* TODO:  Use replace function to ignore extra - character */
 
-  if(value.length > 3 && value.length <= 6)
-    value = value.slice(0,3) + "-" + value.slice(3);
-  else if(value.length > 6)
-    value = value.slice(0,3) + "-" + value.slice(3,6) + "-" + value.slice(6);
+  if(value.length == 3){
 
-  return value;
+    value = value.slice(0, 3) + "-";
+
+}else if (value.length > 4 && value.length < 7){
+
+    value = value.slice(0, 3) + "-" + value.slice(4);
+
+}else if (value.length == 7){
+
+    value = value.slice(0, 3) + "-" + value.slice(4, 7) + "-";
+
+}else if (value.length > 7){
+
+    value = value.slice(0, 3) + "-" + value.slice(4, 7) + "-" + value.slice(8);
+
+}
+
+return value;
+
 }
