@@ -9,19 +9,24 @@ function myKeyPress(e){
   // TODO: set the value of the textbox with the formatted value
 
   var keyPressed;
-  if(window.event) { // IE
-    keyPressed = e.keyCode;
-  } else if(e.which){ // Netscape/Firefox/Opera
-    keyPressed = e.which;
-  }
 
-  var x = String.fromCharCode(keyPressed);
-  var y = formatPhoneNumber("7189515000");
+        if (window.event) { // IE
 
+            keyPressed = e.keyCode;
 
-  console.log("Key Pressed = " + x);
-  console.log("  Formatted = " + y);
+        } else if (e.which) { // Netscape/Firefox/Opera
 
+            keyPressed = e.which;
+
+        }
+
+        var x = String.fromCharCode(keyPressed);
+
+        var y = formatPhoneNumber(mytextbox);
+
+        console.log("Key Pressed = " + x);
+
+        console.log(" Formatted = " + y);
 
 
   // TODO: Add a condition to ignore entries beyond 10 digits
